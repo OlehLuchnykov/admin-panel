@@ -1,6 +1,8 @@
 const ROUTES = {
   DASHBOARD: '/dashboard',
-  LOGIN: '/login'
+  ADMIN: '/admin',
+  SETTINGS: '/settings',
+  LOGIN: '/login',
 };
 
 export default ROUTES;

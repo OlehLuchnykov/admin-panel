@@ -1,7 +1,11 @@
 import { Switch, Route, Redirect } from 'react-router-dom'
+
+import ROUTES from '../routes-pathes';
 import Login from '../pages/Login';
 import Dashboard from '../pages/Dashboard';
-import ROUTES from '../routes-pathes';
+import Settings from '../pages/Settings';
+import Admin from '../pages/Admin';
+
 const Routes = () => {
   return (
     <Switch>
@@ -13,6 +17,12 @@ const Routes = () => {
       </Route>
       <Route path={ROUTES.DASHBOARD}>
         <Dashboard />
+      </Route>
+      <Route path={ROUTES.SETTINGS}>
+        <Settings />
+      </Route>
+      <Route path={ROUTES.ADMIN}>
+        <Admin />
       </Route>
     </Switch>
   );
