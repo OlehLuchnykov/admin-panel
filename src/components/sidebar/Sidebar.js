@@ -40,17 +40,17 @@ const Aside = styled.aside`
       
       &:hover {
         & > .inner-menu {
-          z-index: 1;
-          opacity: 1;
+          transform: translateX(0);
         }
       }
       
       & > .inner-menu {
+        transition: transform .2s ease .2s;
         position: absolute;
+        z-index: -1;
         left: 100%;
         top: 0;
-        z-index: -1;
-        opacity: 0;
+        transform: translateX(-300%);
         max-width: 300px;
         width: 200%;
         height: 100%;
