@@ -6,6 +6,7 @@ import FormGroup from '../components/styled-components/FormGroup';
 import RoundedBtn from '../components/styled-components/RoundedButton';
 import { useHistory } from 'react-router';
 import ROUTES from '../routes-pathes';
+import { apiToken, apiUrl } from '../config';
 
 const Login = () => {
   const authContext = useContext(AuthContext);
@@ -15,7 +16,7 @@ const Login = () => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    fetch('https://identitytoolkit.googleapis.com/v1/accounts:signInWithPassword?key=AIzaSyAMq_qn8vHqho6KmJAd-GF3H3d0JPhpPQQ', {
+    fetch(`${apiUrl}v1/accounts:signInWithPassword?key=${apiToken}`, {
       method: 'POST',
       body: JSON.stringify({
         email: usernameInput.current.value,
